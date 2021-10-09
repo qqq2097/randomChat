@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <title>공진용과 김민지의 익명채팅</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="username-page">
+      <div class="username-page-container">
+        <div class="status-bar">
+          <div class="status-bar__column">
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i>
+          </div>
+          <div class="status-bar__column">
+            <span>
+              <script>
+                let today = new Date();
+                let year = today.getFullYear(); // 년도
+                let month = today.getMonth() + 1; // 월
+                let date = today.getDate(); // 날짜
+                let day = today.getDay(); // 요일
+                document.write("<br>");
+
+                document.write(year + "/" + month + "/" + date);
+              </script></span
+            >
+          </div>
+          <div class="status-bar__column">
+            <span>110%</span>
+            <i class="fas fa-battery-full fa-lg"></i>
+            <i class="fas fa-bolt"></i>
+          </div>
+        </div>
+        <header class="welcome-header">
+          <h1 class="welcome-header__title">Welcome to Kong-Min's 익명채팅</h1>
+          <p class="welcome-header__text">Please input your Nickname</p>
+        </header>
+        <form id="usernameForm" name="usernameForm">
+          <div id="login-form">
+            <input
+              type="text"
+              id="name"
+              placeholder="Nickname"
+              autocomplete="off"
+              class="form-control"
+            />
+
+            <input
+              type="submit"
+              value="Log in"
+              class="accent username-submit"
+            />
+            <a href="#">Find Kokoa Account or Password</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="chat-page" class="hidden">
+      <div class="chat-container">
+        <div class="chat-header">
+          <div class="status-bar">
+            <div class="status-bar__column">
+              <span>No Service</span>
+              <i class="fas fa-wifi"></i>
+            </div>
+            <div class="status-bar__column">
+              <span>
+                <script>
+                  const today = new Date();
+                  let year = today.getFullYear(); // 년도
+                  let month = today.getMonth() + 1; // 월
+                  let date = today.getDate(); // 날짜
+                  let day = today.getDay(); // 요일
+                  let minutes = today.getMinutes();
+                  let hours = today.getHours();
+
+                  document.write(year + "/" + month + "/" + date);
+                </script></span
+              >
+            </div>
+            <div class="status-bar__column">
+              <span>110%</span>
+              <i class="fas fa-battery-full fa-lg"></i>
+              <i class="fas fa-bolt"></i>
+            </div>
+          </div>
+          <header class="alt-header">
+            <div class="alt-header__column">
+              <a href="index.html">
+                <i class="fas fa-angle-left fa-3x"></i>
+              </a>
+            </div>
+            <div class="alt-header__column">
+              <h1 class="alt-header__title">익명 채팅</h1>
+            </div>
+            <div class="alt-header__column">
+              <span><i class="fas fa-search fa-lg"></i></span>
+              <span><i class="fas fa-bars fa-lg"></i></span>
+            </div>
+          </header>
+        </div>
+        <div class="chat__timestamp">
+          <script>
+            document.write(year + "/" + month + "/" + date);
+          </script>
+        </div>
+        <ul id="messageArea"></ul>
+      </div>
+      <form
+        id="messageForm"
+        name="messageForm"
+        nameForm="messageForm"
+        class="reply"
+      >
+        <div class="reply__column">
+          <input
+            type="text"
+            id="message"
+            placeholder="message"
+            autocomplete="off"
+            class="form-control"
+          />
+          <button type="submit">
+            <i class="fas fa-arrow-up"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
